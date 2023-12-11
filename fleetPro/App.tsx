@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {config} from '@gluestack-ui/config';
-import {GluestackUIProvider} from '@gluestack-ui/themed';
+import {GluestackUIProvider, StatusBar} from '@gluestack-ui/themed';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import WelcomeScreen from './src/components/WelcomeScreen';
@@ -15,8 +15,9 @@ const App = () => {
   }, []);
   return (
     <GluestackUIProvider config={config}>
+      <StatusBar hidden={true} />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen
             name="Welcome"
             component={WelcomeScreen}

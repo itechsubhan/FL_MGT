@@ -10,6 +10,7 @@ npm install lucide-react-native
 
 npm i react-native-splash-screen --save 
 
+npx react-native-asset (for asset allocation)
 SplashScreen  
 
 
